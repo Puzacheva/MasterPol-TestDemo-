@@ -1,0 +1,55 @@
+﻿<Page x:Class="MasterPol__TestDemo_.Pages.AddEditPartnerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MasterPol__TestDemo_.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="800"
+      Title="Добавление партнера">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="330"/>
+            <ColumnDefinition Width="400"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Content="Добавление партнера" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="334,0,0,0"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Text="Наименование" Width="100" VerticalAlignment="Center"/>
+        <TextBox x:Name="NameTB" Text="{Binding partner_name}" Grid.Row="1" Grid.Column="1"  HorizontalAlignment="Left" Width="300"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Text="Тип партнера" Width="100" VerticalAlignment="Center"/>
+        <ComboBox x:Name="TypeCB" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Width="150" />
+
+        <TextBlock Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" Text="Рейтинг" Width="100" VerticalAlignment="Center"/>
+        <TextBox x:Name="RatingTB" Text="{Binding partner_rating}" Grid.Row="3" Grid.Column="1"  HorizontalAlignment="Left" Width="100"/>
+        
+        <TextBlock Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" Text="Адрес" Width="100" VerticalAlignment="Center"/>
+        <TextBox x:Name="AddressTB" Text="{Binding partner_address}" Grid.Row="4" Grid.Column="1"  HorizontalAlignment="Left" Width="300"/>
+
+        <TextBlock Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right" Text="ФИО директора" Width="100" VerticalAlignment="Center"/>
+        <TextBox x:Name="FIOTB" Text="{Binding partner_director_fio}" Grid.Row="5" Grid.Column="1"  HorizontalAlignment="Left" Width="300"/>
+
+        <TextBlock Grid.Row="6" Grid.Column="0" HorizontalAlignment="Right" Text="Номер телефона" Width="100" VerticalAlignment="Center"/>
+        <TextBox x:Name="PhoneTB" Text="{Binding partner_number_phone}" Grid.Row="6" Grid.Column="1"  HorizontalAlignment="Left" Width="150"/>
+
+        <TextBlock Grid.Row="7" Grid.Column="0" HorizontalAlignment="Right" Text="Email" Width="100" VerticalAlignment="Center"/>
+        <TextBox x:Name="EmailTB" Text="{Binding partner_email}" Grid.Row="7" Grid.Column="1"  HorizontalAlignment="Left" Width="300"/>
+
+        <Button x:Name="CancelButton" Grid.Row="8" Grid.Column="0" Content="Отмена" HorizontalAlignment="Right" VerticalAlignment="Top" Width="100" Margin="0,20,0,0" Click="CancelButton_Click"/>
+        <Button x:Name="SaveButton" Grid.Row="8" Grid.Column="1" Content="Сохранить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="50,20,0,0" Click="SaveButton_Click"/>
+    </Grid>
+</Page>
