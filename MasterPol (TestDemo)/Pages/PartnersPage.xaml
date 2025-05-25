@@ -21,7 +21,7 @@
 
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Border BorderThickness="1" BorderBrush="Gray" Padding="10">
+                    <Border BorderThickness="1" BorderBrush="Gray" Padding="5">
                         <Grid Width="650">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>

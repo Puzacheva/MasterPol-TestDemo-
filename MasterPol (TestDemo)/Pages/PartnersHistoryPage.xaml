@@ -9,6 +9,23 @@
       Title="История реализации продукции партнером">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" HorizontalAlignment="Center" Content="История реализации продукции"/>
+
+        <TextBlock Grid.Row="1" HorizontalAlignment="Left" Text="Выберите партнера:" VerticalAlignment="Bottom"/>
+        <ComboBox x:Name="PartnersCB" Grid.Row="1" Width="130" HorizontalAlignment="Left" Margin="120,0,0,0" VerticalAlignment="Center" DisplayMemberPath="partner_name" SelectedValuePath="partner_id" SelectedIndex="0" SelectionChanged="PartnersCB_SelectionChanged"/>
+
+        <DataGrid x:Name="ProductsHistoryDG" Grid.Row="2" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Наименование продукции" Width="400" Binding="{Binding Product1.product_name}"/>
+                <DataGridTextColumn Header="Количество" Width="*" Binding="{Binding product_quantity}"/>
+                <DataGridTextColumn Header="Дата продажи" Width="*" Binding="{Binding sale_date}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>

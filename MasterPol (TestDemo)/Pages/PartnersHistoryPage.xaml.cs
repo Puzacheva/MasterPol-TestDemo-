@@ -23,6 +23,14 @@ namespace MasterPol__TestDemo_.Pages
         public PartnersHistoryPage()
         {
             InitializeComponent();
+
+            PartnersCB.ItemsSource = Entities.GetContext().Partner.ToList();
+        }
+
+        private void PartnersCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int selectedValue = (int) PartnersCB.SelectedValue;
+            ProductsHistoryDG.ItemsSource = Entities.GetContext().PartnerProduct.Where(p => p.partner == selectedValue).ToList();
         }
     }
 }
