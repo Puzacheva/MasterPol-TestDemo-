@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MasterPol__TestDemo_.Pages;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -43,9 +44,19 @@ namespace MasterPol__TestDemo_
             if (!(e.Content is Page page)) return;
             this.Title = $"Мастер Пол - {page.Title}";
 
-                if (page is Pages.PartnersPage)
+            if (page is Pages.PartnersPage)
                 BackButton.Visibility = Visibility.Hidden;
             else BackButton.Visibility = Visibility.Visible;
+
+            if (page is Pages.PartnersPage)
+                PartnersHistoryButton.Visibility = Visibility.Visible;
+            else PartnersHistoryButton.Visibility= Visibility.Hidden;
+
+        }
+
+        private void PartnersHistoryButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame?.Navigate(new PartnersHistoryPage());
         }
     }
 }

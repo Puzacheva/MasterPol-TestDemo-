@@ -14,6 +14,7 @@
         </Grid.RowDefinitions>
 
         <Button x:Name="BackButton" Grid.Row="0" Width="100" HorizontalAlignment="Left" Margin="10,0,0,0" Content="Назад" Click="BackButton_Click"/>
+        <Button x:Name="PartnersHistoryButton" Grid.Row="0" Width="220" HorizontalAlignment="Center" Click="PartnersHistoryButton_Click" Content="История реализации продукции"/>
         <Image Grid.Row="0" Height="40" HorizontalAlignment="Right" Source="/Resources/Мастер пол.png" Margin="0,0,10,0"/>
 
         <Frame x:Name="MainFrame" Grid.Row="1" Navigated="MainFrame_Navigated" Source="Pages\PartnersPage.xaml" NavigationUIVisibility="Hidden"/>

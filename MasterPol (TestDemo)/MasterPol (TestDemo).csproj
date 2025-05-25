@@ -85,6 +85,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PartnersHistoryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PartnersPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -111,6 +115,9 @@
     </Compile>
     <Compile Include="Pages\AddEditPartnerPage.xaml.cs">
       <DependentUpon>AddEditPartnerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PartnersHistoryPage.xaml.cs">
+      <DependentUpon>PartnersHistoryPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PartnersPage.xaml.cs">
       <DependentUpon>PartnersPage.xaml</DependentUpon>
