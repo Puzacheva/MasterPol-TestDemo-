@@ -63,7 +63,7 @@ namespace MasterPol__TestDemo_.Pages
                 }
 
                 try
-                {
+                { 
                     Entities.GetContext().SaveChanges();
                     MessageBox.Show("Данные успешно сохранены!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
                     NavigationService?.Navigate(new PartnersPage());
